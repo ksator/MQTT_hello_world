@@ -2,7 +2,7 @@
 
 MQTT (Message Queuing Telemetry Transport) is a pub/sub messaging protocol that works on top of TCP/IP.  
 Multiple MQTT clients connect to a central communication point, called an “MQTT Broker“, and subscribe to topics that they are interested in.  
-These same clients can also publish messages via this connection to the central broker.  
+These same clients can also publish messages to the central broker.  
 The default TCP Port for MQTT is 1883  
 The default TCP Port for MQTT over SSL is 8883  
 
