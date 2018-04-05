@@ -1,6 +1,3 @@
-
-All the credits go to https://techmocha.blog/2018/03/29/streaming-junos-telemetry-to-mqtt-via-telegraf/
-
 ### About MQTT
 
 MQTT (Message Queuing Telemetry Transport) is a pub/sub messaging protocol that works on top of TCP/IP.  
@@ -50,6 +47,7 @@ Fetched 131 kB in 0s (346 kB/s)
 Reading package lists... Done
 ```
 
+Install the Mosquitto Broker
 ```
 $ sudo apt-get -f install
 Reading package lists... Done
@@ -57,8 +55,6 @@ Building dependency tree
 Reading state information... Done
 0 upgraded, 0 newly installed, 0 to remove and 66 not upgraded.
 ```
-
-Install the Mosquitto Broker
 ```
 $ sudo apt-get install mosquitto
 Reading package lists... Done
@@ -104,7 +100,8 @@ Processing triggers for ureadahead (0.100.0-19) ...
 
 ### Check the Mosquitto service 
 
-Mosquitto service automatically start after installation:    
+Mosquitto service automatically start after installation. You can check the Mosquitto service using the command ```/etc/init.d/mosquitto status```  
+
 ```
 $ sudo /etc/init.d/mosquitto status
 ● mosquitto.service - LSB: mosquitto MQTT v3.1 message broker
@@ -120,7 +117,7 @@ Apr 05 10:47:39 jedi-2 mosquitto[2621]:    ...done.
 Apr 05 10:47:39 jedi-2 systemd[1]: Started LSB: mosquitto MQTT v3.1 message broker.
 ```
 
-To stop the Mosquitto Broker service, use ```sudo /etc/init.d/mosquitto stop```  
+To stop the Mosquitto Broker service, use the command ```sudo /etc/init.d/mosquitto stop```  
 
 ```
 $ sudo /etc/init.d/mosquitto stop
@@ -147,7 +144,7 @@ Apr 05 10:53:12 jedi-2 mosquitto[2823]:    ...done.
 Apr 05 10:53:12 jedi-2 systemd[1]: Stopped LSB: mosquitto MQTT v3.1 message broker.
 ```
 
-To start the Mosquitto Broker service, use ```sudo /etc/init.d/mosquitto start```  
+To start the Mosquitto Broker service, use the command ```sudo /etc/init.d/mosquitto start```  
 
 ```
 $ sudo /etc/init.d/mosquitto start
@@ -176,7 +173,8 @@ Apr 05 10:53:23 jedi-2 systemd[1]: Started LSB: mosquitto MQTT v3.1 message brok
 
 ### Mosquitto broker configuration file
 
-Note the configuration file for the Mosquitto broker, where you can find details for the service, such as the log file:
+you can find details for the service, such as the log file in the configuration file for the Mosquitto broker:  
+
 ```
 $ more /etc/mosquitto/mosquitto.conf
 # Place your local configuration in /etc/mosquitto/conf.d/
@@ -196,12 +194,9 @@ include_dir /etc/mosquitto/conf.d
 
 ### Install the mosquitto-clients
 
-install the ```mosquitto-clients``` package to easily test MQTT through a couple of command lines:
-
+install the ```mosquitto-clients``` package to then easily test MQTT through a couple of commands:
   - ```mosquitto_pub```: publish messages to the Mosquitto MQTT Broker to a specific Topic.
   - ```mosquitto_sub```: subscribe to a Topic to receive messages from the Mosquitto MQTT Broker.
-
-
 
 ```
 $ sudo apt-get install mosquitto-clients
@@ -218,7 +213,8 @@ After this operation, 336 kB of additional disk space will be used.
 Do you want to continue? [Y/n] Y
 Get:1 http://archive.ubuntu.com/ubuntu xenial-updates/main amd64 libc-ares2 amd64 1.10.0-3ubuntu0.2 [34.1 kB]
 Get:2 http://ppa.launchpad.net/mosquitto-dev/mosquitto-ppa/ubuntu xenial/main amd64 libmosquitto1 amd64 1.4.15-0mosquitto1~xenial1 [54.6 kB]
-Get:3 http://ppa.launchpad.net/mosquitto-dev/mosquitto-ppa/ubuntu xenial/main amd64 mosquitto-clients amd64 1.4.15-0mosquitto1~xenial1 [55.6 kB]
+Get:3 http://ppa.launchpad.net/mosquitto-dev/mosquitto-ppa/ubuntu xenial/main amd64 mosquitto-clients amd64 1.4.15-0mosquitto1~xenial1 [55.6
+kB]
 Fetched 144 kB in 0s (1,140 kB/s)
 Selecting previously unselected package libc-ares2:amd64.
 (Reading database ... 60232 files and directories currently installed.)
@@ -235,20 +231,19 @@ Setting up libc-ares2:amd64 (1.10.0-3ubuntu0.2) ...
 Setting up libmosquitto1:amd64 (1.4.15-0mosquitto1~xenial1) ...
 Setting up mosquitto-clients (1.4.15-0mosquitto1~xenial1) ...
 Processing triggers for libc-bin (2.23-0ubuntu10) ...
-
 ```
 
 ### Test the Mosquitto MQTT Broker
 
 With the installation of both the Mosquitto Broker and clients, you can test that messages can be both published to and consumed.  
 
-First, in one console window, subscribe to a Topic called “juniper”, as follows:
+First, in one console window, subscribe to a Topic called "juniper", as follows:
 
 ```
 $ mosquitto_sub -h localhost -t "juniper"
 
 ```
-Next, using another console window, let’s publish a message to the “juniper” Topic, as follows:
+Next, using another console window, let’s publish a message to the "juniper" Topic, as follows:
 ```
 $ mosquitto_pub -d -h localhost -t "juniper" -m "Hello World!"
 Client mosqpub|2811-jedi-2 sending CONNECT
@@ -262,4 +257,5 @@ $ mosquitto_sub -h localhost -t "juniper"
 Hello World!
 ```
 
-
+### Credits 
+All the credits go to https://techmocha.blog/2018/03/29/streaming-junos-telemetry-to-mqtt-via-telegraf/
