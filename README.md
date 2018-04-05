@@ -213,8 +213,7 @@ After this operation, 336 kB of additional disk space will be used.
 Do you want to continue? [Y/n] Y
 Get:1 http://archive.ubuntu.com/ubuntu xenial-updates/main amd64 libc-ares2 amd64 1.10.0-3ubuntu0.2 [34.1 kB]
 Get:2 http://ppa.launchpad.net/mosquitto-dev/mosquitto-ppa/ubuntu xenial/main amd64 libmosquitto1 amd64 1.4.15-0mosquitto1~xenial1 [54.6 kB]
-Get:3 http://ppa.launchpad.net/mosquitto-dev/mosquitto-ppa/ubuntu xenial/main amd64 mosquitto-clients amd64 1.4.15-0mosquitto1~xenial1 [55.6
-kB]
+Get:3 http://ppa.launchpad.net/mosquitto-dev/mosquitto-ppa/ubuntu xenial/main amd64 mosquitto-clients amd64 1.4.15-0mosquitto1~xenial1 [55.6kB]
 Fetched 144 kB in 0s (1,140 kB/s)
 Selecting previously unselected package libc-ares2:amd64.
 (Reading database ... 60232 files and directories currently installed.)
