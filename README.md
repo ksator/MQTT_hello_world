@@ -12,7 +12,7 @@ Mosquitto is an open-source message broker that implements the MQTT protocol
 
 ### Install Mosquitto MQTT Broker 
 
-From ubuntu 16.04, add the Mosquitto PPA repository so that we can get the latest version of Mosquitto.     
+From ubuntu 16.04, add the Mosquitto PPA repository so that we can get the latest version of Mosquitto       
 
 ```
 $ sudo apt-add-repository ppa:mosquitto-dev/mosquitto-ppa
