@@ -110,8 +110,8 @@ Physical interface: ge-0/0/1, Enabled, Physical link is Up
   CoS queues     : 8 supported, 8 maximum usable queues
   Current address: fa:16:3e:db:64:03, Hardware address: fa:16:3e:db:64:03
   Last flapped   : 2018-03-13 17:42:59 UTC (4w6d 07:24 ago)
-  Input rate     : 0 bps (0 pps)
-  Output rate    : 0 bps (0 pps)
+  Input rate     : 744 bps (0 pps)
+  Output rate    : 304 bps (0 pps)
   Active alarms  : None
   Active defects : None
   PCS statistics                      Seconds
@@ -126,8 +126,8 @@ Physical interface: ge-0/0/1, Enabled, Physical link is Up
 
   Logical interface ge-0/0/1.0 (Index 334) (SNMP ifIndex 529)
     Flags: Up SNMP-Traps 0x4004000 Encapsulation: ENET2
-    Input packets : 828047
-    Output packets: 828065
+    Input packets : 828055
+    Output packets: 828073
     Protocol inet, MTU: 1500
     Max nh cache: 75000, New hold nh limit: 75000, Curr nh cnt: 1,
     Curr new hold cnt: 0, NH drop cnt: 0
@@ -180,8 +180,8 @@ Physical interface: ge-0/0/3, Enabled, Physical link is Up
   CoS queues     : 8 supported, 8 maximum usable queues
   Current address: fa:16:3e:1c:bb:2f, Hardware address: fa:16:3e:1c:bb:2f
   Last flapped   : 2018-03-13 17:42:59 UTC (4w6d 07:24 ago)
-  Input rate     : 232 bps (0 pps)
-  Output rate    : 504 bps (0 pps)
+  Input rate     : 152 bps (0 pps)
+  Output rate    : 0 bps (0 pps)
   Active alarms  : None
   Active defects : None
   PCS statistics                      Seconds
@@ -196,8 +196,8 @@ Physical interface: ge-0/0/3, Enabled, Physical link is Up
 
   Logical interface ge-0/0/3.0 (Index 332) (SNMP ifIndex 528)
     Flags: Up SNMP-Traps 0x4004000 Encapsulation: ENET2
-    Input packets : 1681952
-    Output packets: 1731490
+    Input packets : 1681959
+    Output packets: 1731496
     Protocol inet, MTU: 1500
     Max nh cache: 75000, New hold nh limit: 75000, Curr nh cnt: 1,
     Curr new hold cnt: 0, NH drop cnt: 0
@@ -420,13 +420,13 @@ Physical interface: em1, Enabled, Physical link is Up
   Link type      : Full-Duplex
   Current address: fa:16:3e:14:41:ee, Hardware address: fa:16:3e:14:41:ee
   Last flapped   : 2018-03-13 17:41:39 UTC (4w6d 07:26 ago)
-    Input packets : 68795884
-    Output packets: 69879941
+    Input packets : 68796405
+    Output packets: 69880449
 
   Logical interface em1.0 (Index 3) (SNMP ifIndex 24)
     Flags: Up SNMP-Traps 0x4004000 Encapsulation: ENET2
-    Input packets : 68794936
-    Output packets: 69879941
+    Input packets : 68795457
+    Output packets: 69880449
     Protocol inet, MTU: 1500
     Max nh cache: 75000, New hold nh limit: 75000, Curr nh cnt: 1,
     Curr new hold cnt: 0, NH drop cnt: 0
@@ -493,13 +493,13 @@ Physical interface: fxp0, Enabled, Physical link is Up
   Link type      : Full-Duplex
   Current address: fa:16:3e:27:d9:47, Hardware address: fa:16:3e:27:d9:47
   Last flapped   : 2018-03-13 17:41:39 UTC (4w6d 07:26 ago)
-    Input packets : 5239206
-    Output packets: 3079894
+    Input packets : 5239824
+    Output packets: 3080707
 
   Logical interface fxp0.0 (Index 4) (SNMP ifIndex 13)
     Flags: Up SNMP-Traps 0x4004000 Encapsulation: ENET2
-    Input packets : 5238242
-    Output packets: 3079894
+    Input packets : 5238860
+    Output packets: 3080707
     Protocol inet, MTU: 1500
     Max nh cache: 75000, New hold nh limit: 75000, Curr nh cnt: 7,
     Curr new hold cnt: 0, NH drop cnt: 0
@@ -567,8 +567,8 @@ Physical interface: lo0, Enabled, Physical link is Up
   Interface flags: SNMP-Traps
   Link flags     : None
   Last flapped   : Never
-    Input packets : 4003195
-    Output packets: 4003195
+    Input packets : 4003221
+    Output packets: 4003221
 
   Logical interface lo0.0 (Index 333) (SNMP ifIndex 16)
     Flags: SNMP-Traps Encapsulation: Unspecified
@@ -596,8 +596,8 @@ Physical interface: lo0, Enabled, Physical link is Up
 
   Logical interface lo0.16385 (Index 320) (SNMP ifIndex 22)
     Flags: SNMP-Traps Encapsulation: Unspecified
-    Input packets : 4003191
-    Output packets: 4003191
+    Input packets : 4003217
+    Output packets: 4003217
     Protocol inet, MTU: Unlimited
     Max nh cache: 0, New hold nh limit: 0, Curr nh cnt: 0, Curr new hold cnt: 0,
     NH drop cnt: 0
