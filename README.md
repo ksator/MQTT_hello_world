@@ -257,4 +257,5 @@ Hello World!
 ```
 
 ### Credits 
-All the credits go to https://techmocha.blog/2018/03/29/streaming-junos-telemetry-to-mqtt-via-telegraf/
+
+Thank you to Jag Channa of OpenEye Software for writing this blog: https://openeye.blog/2018/03/29/streaming-junos-telemetry-to-mqtt-via-telegraf/. It provided the basis for this repository. 
