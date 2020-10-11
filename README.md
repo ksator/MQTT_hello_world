@@ -236,23 +236,23 @@ Processing triggers for libc-bin (2.23-0ubuntu10) ...
 
 With the installation of both the Mosquitto Broker and clients, you can test that messages can be both published to and consumed.  
 
-First, in one console window, subscribe to a Topic called "juniper", as follows:
+First, in one console window, subscribe to a Topic called "topic1", as follows:
 
 ```
-$ mosquitto_sub -h localhost -t "juniper"
+$ mosquitto_sub -h localhost -t "topic1"
 
 ```
-Next, using another console window, let’s publish a message to the "juniper" Topic, as follows:
+Next, using another console window, let’s publish a message to the "topic1" Topic, as follows:
 ```
-$ mosquitto_pub -d -h localhost -t "juniper" -m "Hello World!"
+$ mosquitto_pub -d -h localhost -t "topic1" -m "Hello World!"
 Client mosqpub|2811-jedi-2 sending CONNECT
 Client mosqpub|2811-jedi-2 received CONNACK
-Client mosqpub|2811-jedi-2 sending PUBLISH (d0, q0, r0, m1, 'juniper', ... (12 bytes))
+Client mosqpub|2811-jedi-2 sending PUBLISH (d0, q0, r0, m1, 'topic1', ... (12 bytes))
 Client mosqpub|2811-jedi-2 sending DISCONNECT
 ```
-Now return back to first console (that subscribed to the “juniper” topic).  You can see the published “Hello World!” message (published by the second console)  
+Now return back to first console (that subscribed to the “topic1” topic).  You can see the published “Hello World!” message (published by the second console)  
 ```
-$ mosquitto_sub -h localhost -t "juniper"
+$ mosquitto_sub -h localhost -t "topic1"
 Hello World!
 ```
 
